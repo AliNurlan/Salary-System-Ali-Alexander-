@@ -1,8 +1,7 @@
-package org;
 
 public abstract class Employee {
-    private double salary;
-    private int workingHours;
+    protected double salary;
+    protected int workingHours;
 
     public void setWorkingHours(int value){
         if (value < 1) System.out.println("Incorect range of value. Value needs to be greater that zero.");
@@ -16,12 +15,7 @@ public abstract class Employee {
     }
     public double getSalary(){return salary;};
 
-    //totalIncomePerMonth
+    //totalIncomePerWeek
     public abstract double income();
 
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
-    }
 }
