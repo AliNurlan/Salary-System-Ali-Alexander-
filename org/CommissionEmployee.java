@@ -2,11 +2,11 @@ public class CommissionEmployee extends Employee{
     protected double sales;
     protected double percentageOfSales;
     
-    CommissionEmployee(double sales, double percentageOfSales, int workingHours){
+    CommissionEmployee(int workingHours, double sales, double percentageOfSales){
         super();
         this.sales = sales;
         this.percentageOfSales = percentageOfSales;
-        setWorkingHours(workingHours);
+        this.workingHours = workingHours;
     }
 
     @Override

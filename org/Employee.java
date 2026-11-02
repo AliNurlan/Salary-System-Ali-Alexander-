@@ -1,7 +1,7 @@
 
 public abstract class Employee {
-    protected double salary;
-    protected int workingHours;
+    protected double salary; //fixed salary per hour
+    protected int workingHours; //working hours per week
 
     Employee(){
         this.salary = 4.64;
