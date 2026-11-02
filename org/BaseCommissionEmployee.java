@@ -1,9 +1,9 @@
 public class BaseCommissionEmployee extends CommissionEmployee{
-    BaseCommissionEmployee(double salary, int workingHours, double sales, double percentageOfSales){
-        super(workingHours, sales, percentageOfSales);
-        this.salary = salary;
+    BaseCommissionEmployee(double sales, double percentageOfSales, int workingHours) {
+        super(sales, percentageOfSales, workingHours);
+        //TODO Auto-generated constructor stub
     }
-    
+
     @Override
     public double income() {
         return super.income() + salary * workingHours;
