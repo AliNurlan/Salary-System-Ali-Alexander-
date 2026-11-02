@@ -7,7 +7,6 @@ public class PartTimeEmployee extends Employee{
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
+       return "PartTimeEmployee.\tSalary: " + salary + "\tWorking hours per week: " + workingHours;
     }
 }
