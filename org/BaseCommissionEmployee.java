@@ -1,6 +1,7 @@
 public class BaseCommissionEmployee extends CommissionEmployee{
     BaseCommissionEmployee(double salary, int workingHours, double sales, double percentageOfSales){
-        super(sales, percentageOfSales, workingHours);
+        super(workingHours, sales, percentageOfSales);
+        this.salary = salary;
     }
     
     @Override
