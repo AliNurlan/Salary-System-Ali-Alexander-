@@ -11,14 +11,13 @@ public class CommissionEmployee extends Employee{
 
     @Override
     public double income() {
-        // TODO Auto-generated method stub
-        return 0;
+        return sales * percentageOfSales;
     }
     
     @Override
     public String toString() {
-        return "CommissionEmployee.\tSalary: " + salary +
-         "\tWorking hours per week: " + workingHours
+        return "CommissionEmployee."
+         + "\tWorking hours per week: " + workingHours
          + "\nSales: " + sales
          + "\tPercentage Of Sales: " + percentageOfSales;
     }
