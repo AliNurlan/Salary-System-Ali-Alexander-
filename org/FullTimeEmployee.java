@@ -1,15 +1,20 @@
 
 public class FullTimeEmployee extends Employee{
 
+        protected double salary; //fixed salary per hour
+    
+    final public double getSalary(){
+        return salary;
+    }
+
     FullTimeEmployee(){
         this.salary = 195; 
-        this.workingHours = 40; 
     }
-    FullTimeEmployee(double salary){
+    FullTimeEmployee(String firstName, String lastName, int socialNumber, double salary){
+        super( firstName,  lastName,  socialNumber);
         this.salary = salary;
     }
 
-    @Override
     public void setSalary(double value) {
         if (value < 195) System.out.println("Incorect range of value. Value needs to be greater that minimum salary in latvia per week(~195 euro).");
         else{
@@ -24,6 +29,6 @@ public class FullTimeEmployee extends Employee{
 
     @Override
     public String toString() {
-       return "FullTimeEmployee.\tSalary: " + salary + "\tWorking hours per week: " + workingHours;
+       return "FullTimeEmployee.\tSalary: " + salary + "\tWorking hours per week: ";
     }
 }

@@ -6,7 +6,6 @@ public class CommissionEmployee extends Employee{
         super();
         this.sales = sales;
         this.percentageOfSales = percentageOfSales;
-        this.workingHours = workingHours;
     }
 
     @Override
@@ -17,7 +16,7 @@ public class CommissionEmployee extends Employee{
     @Override
     public String toString() {
         return "CommissionEmployee."
-         + "\tWorking hours per week: " + workingHours
+         + "\tWorking hours per week: "
          + "\nSales: " + sales
          + "\tPercentage Of Sales: " + percentageOfSales;
     }

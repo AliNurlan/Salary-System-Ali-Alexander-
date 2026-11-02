@@ -1,39 +1,51 @@
 
 public abstract class Employee {
-    protected double salary; //fixed salary per hour
-    protected int workingHours; //working hours per week
+    private String firstName = "John";
+    private String lastName = "Doe";
+    private int socialNumber;
 
-    Employee(){
-        this.salary = 4.64;
-        this.workingHours = 40;
-    }
-    Employee(double salary, int workingHours){
-        this.salary = salary;
-        this.workingHours = workingHours;
+    Employee(){}
+    Employee(String firstName, String lastName, int socialNumber){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.socialNumber = socialNumber;
     }
 
-    final public void setWorkingHours(int value){
-        if (value < 1){
-            System.out.println("Incorect range of value. Value needs to be greater that zero.");
+    final public void setFirstName(String name){
+        if(name == null || name == ""){
+            System.out.println("Name can't be empty");
+        }
+        else if(name.length() < 2){
+            System.out.println("Name can't be shorter that 2 letters");
         }
         else{
-        workingHours = value;
-        }    
-    }
-    final public int getWorkingHours(){
-        return workingHours;
-    };
-    
-    public void setSalary(double value){
-        if (value < 4.64){
-            System.out.println("Incorect range of value. Value needs to be greater that minimum salary in latvia per hour(4.64 euro).");
-        }else{
-            salary = value;
+            this.firstName = name;
         }
-        
     }
-    final public double getSalary(){
-        return salary;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    final public void setLastName(String name){
+        if(name == null || name == ""){
+            System.out.println("Last name can't be empty");
+        }
+        else if(name.length() < 3){
+            System.out.println("Last name can't be shorter that 3 letters");
+        }
+        else{
+            this.lastName = name;
+        }
+    }
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setSocialNumber(int socialNumber) {
+        this.socialNumber = socialNumber;
+    }
+    final public int getSocialNumber() {
+        return socialNumber;
     }
 
     //totalIncomePerWeek
