@@ -6,13 +6,14 @@ public class BaseCommissionEmployee extends CommissionEmployee{
 
     @Override
     public double income() {
-        // TODO Auto-generated method stub
-        return super.income();
+        return super.income() + salary * workingHours;
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
+        return "BaseCommissionEmployee.\tSalary: " + salary +
+         "\tWorking hours per week: " + workingHours
+         + "\nSales: " + sales
+         + "\tPercentage Of Sales: " + percentageOfSales;
     }
 }

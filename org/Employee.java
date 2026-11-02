@@ -1,7 +1,7 @@
 
 public abstract class Employee {
-    protected double salary;
-    protected int workingHours;
+    protected double salary; //fixed salary per hour
+    protected int workingHours; //working hours per week
 
     Employee(){
         this.salary = 4.64;
@@ -24,7 +24,7 @@ public abstract class Employee {
         return workingHours;
     };
     
-    final public void setSalary(double value){
+    public void setSalary(double value){
         if (value < 4.64){
             System.out.println("Incorect range of value. Value needs to be greater that minimum salary in latvia per hour(4.64 euro).");
         }else{

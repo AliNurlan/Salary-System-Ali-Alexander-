@@ -1,5 +1,9 @@
 
 public class PartTimeEmployee extends Employee{
+    PartTimeEmployee(double salary, int workingHours){
+        super(salary, workingHours);
+    }
+
     @Override
     public double income() {
         return salary * workingHours;
