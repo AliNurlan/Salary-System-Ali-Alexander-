@@ -29,6 +29,10 @@ public class FullTimeEmployee extends Employee{
 
     @Override
     public String toString() {
-       return "FullTimeEmployee.\tSalary: " + salary + "\tWorking hours per week: ";
+       return "Name: " + getFirstName() + " " + getLastName() + "\n"
+       + "Position: Full Time Employee\n"
+       + "Base Salary: " + salary + " Euro\n"
+       + "Salary: " + salary + " Euro\n"
+       + "Social Number: " + getSocialNumber();
     }
 }

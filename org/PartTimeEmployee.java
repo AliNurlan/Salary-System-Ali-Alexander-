@@ -40,6 +40,10 @@ public class PartTimeEmployee extends Employee{
 
     @Override
     public String toString() {
-       return "PartTimeEmployee.\tSalary: " + salary + "\tWorking hours per week: " + workingHours;
+       return "Name: " + getFirstName() + " " + getLastName() + "\n"
+       + "Position: Part Time Employee\n"
+       + "Number of hours work: " + workingHours
+       + "\nSalary: " + income() + " Euro\n"
+       + "Social Number: " + getSocialNumber();
     }
 }
