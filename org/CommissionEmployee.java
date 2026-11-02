@@ -2,11 +2,10 @@ public class CommissionEmployee extends Employee{
     protected double sales;
     protected double commission;
     
-    CommissionEmployee(double sales, double commission, int workingHours){
-        super();
+    CommissionEmployee(String firstName, String lastName, int sales, double commission, int socialNumber){
+        super(firstName, lastName, socialNumber);
         this.sales = sales;
         this.commission = commission;
-        setWorkingHours(workingHours);
     }
 
     @Override
@@ -16,10 +15,10 @@ public class CommissionEmployee extends Employee{
     
     @Override
     public String toString() {
-        return "CommissionEmployee.\tSalary: " + salary +
-         "\tWorking hours per week: " + workingHours
+        return "CommissionEmployee.\tName: " + getFirstName() +" "+ getLastName() +
+         "\tSocial Number: " + getSocialNumber()
          + "\nNumer of Sale: " + sales
          + "\tCommission: " + commission
-         + "\tSocial Numbers: ";
+         + "\tSalary: " + income();
     }
 }
