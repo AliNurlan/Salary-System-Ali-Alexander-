@@ -14,7 +14,7 @@ public class BaseCommissionEmployee extends CommissionEmployee{
 
     @Override
     public double income() {
-        return super.income() + baseSalary + super.income()*bonus;
+        return super.income() + baseSalary + baseSalary*bonus;
     }
 
     @Override
